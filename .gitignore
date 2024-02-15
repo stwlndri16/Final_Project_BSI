@@ -35,4 +35,4 @@ yarn-error.*
 *.tsbuildinfo
 
 # folder
-%ProgramData%
+"%ProgramData%/"
