@@ -3,11 +3,12 @@
 import React, { useState } from "react"; 
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native"; 
 
-const Main = () => { 
+const MainSrc = () => { 
 	const [playerVal, setPlayerVal] = useState(null); 
 	const [computerVal, setComputerVal] = useState(null); 
 	const [playerScore, setPlayerScore] = useState(0); 
-	const [compScore, setCompScore] = useState(0); 
+	const [compScore, setCompScore] = useState(0);
+	const [showResult, setShowResult] = useState(false); 
 
 	const logic = (playerVal, computerVal) => { 
 		if (playerVal === computerVal) { 
@@ -53,7 +54,7 @@ const Main = () => {
 					onPress={() => decision("ROCK")} 
 				> 
 					<Text style={styles.buttonText}> 
-						Rock 
+						✊ 
 					</Text> 
 				</TouchableOpacity> 
 				<TouchableOpacity 
@@ -61,7 +62,7 @@ const Main = () => {
 					onPress={() => decision("PAPER")} 
 				> 
 					<Text style={styles.buttonText}> 
-						Paper 
+						✋
 					</Text> 
 				</TouchableOpacity> 
 				<TouchableOpacity 
@@ -69,7 +70,7 @@ const Main = () => {
 					onPress={() => decision("SCISSORS")} 
 				> 
 					<Text style={styles.buttonText}> 
-						Scissors 
+						✌ 
 					</Text> 
 				</TouchableOpacity> 
 			</View> 
@@ -135,4 +136,4 @@ const styles = StyleSheet.create({
 	}, 
 }); 
 
-export default Main;
+export default MainSrc;
