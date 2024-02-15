@@ -9,7 +9,7 @@ const LoginScreen = ({ navigation }) => {
 
   const handleLogin = () => {
     console.log(`Logging in with username: ${username} and password: ${password}`);
-    navigation.navigate('HomePage');
+    navigation.navigate('GamePage');
   };
 
   const registerPage = () => {
